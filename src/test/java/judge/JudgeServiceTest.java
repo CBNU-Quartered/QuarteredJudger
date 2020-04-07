@@ -2,6 +2,8 @@ package judge;
 
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 class JudgeServiceTest {
     private static final String TEST_C = "#include<stdio.h>\n" +
             "int main(){\n" +
@@ -14,6 +16,6 @@ class JudgeServiceTest {
     @Test
     void name() throws Exception {
         JudgeService judgeService = new JudgeService();
-        judgeService.run(TEST_C, "C");
+        assertThat(judgeService.run(TEST_C, "C", "1 2", "3")).contains("CORRECTg");
     }
 }

@@ -65,6 +65,6 @@ public class JudgeService {
             logger.info("CORRECT ANSWER !!");
             return "CORRECT ANSWER !!";
         }
-        return "SEX";
+        return "WRONG";
     }
 }
