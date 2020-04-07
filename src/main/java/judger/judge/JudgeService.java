@@ -14,7 +14,7 @@ public class JudgeService {
     private static final String TESTER_DIR = "/Users/hyogeon/Downloads/JudgerProject/Desktop/tester";
     private static final String DOCKER_DIR = "/home";
 
-    private static final String LOCAL_INIT_COMMAND = "sh init.sh";
+    private static final String LOCAL_INIT_COMMAND = "sh /Users/hyogeon/Downloads/JudgerProject/Desktop/tester/init.sh";
 
     private static final String DOCKER_C_COMPILE_COMMAND = "docker run --rm -v " + TESTER_DIR + ":" + DOCKER_DIR + ' '
             + "gcc gcc " + DOCKER_DIR + "/test.c -o " + DOCKER_DIR + "/test.o  -O2 -Wall -lm -static -std=c99 -DONLINE_JUDGE -DBOJ";
