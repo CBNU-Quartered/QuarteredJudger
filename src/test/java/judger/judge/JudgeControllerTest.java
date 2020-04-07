@@ -1,5 +1,7 @@
-package judge;
+package judger.judge;
 
+import judger.judge.SubmissionInfo;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +26,7 @@ public class JudgeControllerTest {
     private WebTestClient webTestClient;
 
     @Test
+    @DisplayName("C 코드 채점 테스트")
     void requestJudge() {
         SubmissionInfo submissionInfo = new SubmissionInfo(TEST_C, "c", "1 2", "3");
 

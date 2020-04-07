@@ -1,4 +1,4 @@
-package judge;
+package judger.judge;
 
 public class SubmissionInfo {
     private String source;

@@ -1,4 +1,4 @@
-package judge;
+package judger.judge;
 
 public class RunResult {
     private final long cpuTime;

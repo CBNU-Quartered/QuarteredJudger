@@ -1,6 +1,6 @@
-package judge;
+package judger.judge;
 
-import judge.util.ShellCommandUtil;
+import judger.judge.util.ShellCommandUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
