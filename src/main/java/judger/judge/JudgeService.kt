@@ -12,9 +12,9 @@ import java.io.IOException
 class JudgeService(@Autowired private val shellCommandProperties: ShellCommandProperties) {
 
     fun run(source: String, language: String, input: String, answer: String): String {
-        createInputFile(input)
-
         ShellCommandUtil.execCommand(shellCommandProperties.localInitCommand)
+
+        createInputFile(input)
         createSourceFile(source)
         ShellCommandUtil.execCommand(shellCommandProperties.cCompileCommand)
         ShellCommandUtil.execCommand(shellCommandProperties.cRunCommand)
