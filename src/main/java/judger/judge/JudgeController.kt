@@ -16,7 +16,7 @@ class JudgeController(private val judgeService: JudgeService) {
     }
 
     @PostMapping
-    fun grade(@RequestBody submissionInfo: SubmissionInfo) : ResponseEntity<ScoringResult> {
+    fun grade(@RequestBody submissionInfo: SubmissionInfo): ResponseEntity<ScoringResult> {
         val scoringCode = judgeService.run(submissionInfo.source, submissionInfo.language, submissionInfo.input, submissionInfo.answer)
         val scoringResult = ScoringResult(scoringCode)
 
