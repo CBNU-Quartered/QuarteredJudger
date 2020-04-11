@@ -1,4 +1,4 @@
 package judger.judge
 
-class ScoringResult(val scoringCode: String) {
+data class ScoringResult(val scoringCode: String) {
 }

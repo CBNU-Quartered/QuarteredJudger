@@ -20,6 +20,8 @@ class JudgeController(private val judgeService: JudgeService) {
         val scoringCode = judgeService.run(submissionInfo.source, submissionInfo.language, submissionInfo.input, submissionInfo.answer)
         val scoringResult = ScoringResult(scoringCode)
 
+        logger.info("scoringResult: {}", scoringResult)
+
         return ResponseEntity.ok().body(scoringResult)
     }
 }
